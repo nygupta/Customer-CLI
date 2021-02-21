@@ -1,0 +1,22 @@
+{
+  "name": "customer-cli",
+  "version": "1.0.0",
+  "description": "Customer management CLI",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./comands.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "nygupta",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "commander": "^7.1.0",
+    "figlet": "^1.5.0",
+    "inquirer": "^7.3.3",
+    "mongoose": "^5.11.17"
+  }
+}
