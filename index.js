@@ -24,6 +24,7 @@ const addCustomer = (customer) => {
         .then(customer => {
         console.info('New Customer Added');
         //db.close();
+        mongoose.connection.close();
     });
 }
 
@@ -35,6 +36,7 @@ const findCustomer = (name) => {
             console.info(customer);
             console.info(`${customer.length} matches`); 
             //db.close();
+            mongoose.connection.close();
         });
 }
 
@@ -43,6 +45,7 @@ const updateCustomer = (_id, customer) => {
     Customer.updateOne({_id}, customer)
         .then(customer => {
             console.info('Customer Updated');
+            mongoose.connection.close();
         });
 }
 
@@ -51,6 +54,7 @@ const removeCustomer = (_id) => {
     Customer.deleteOne({_id})
         .then(customer => {
             console.info('Customer Removed');
+            mongoose.connection.close();
         });
 }
 
@@ -60,6 +64,7 @@ const listCustomers = () => {
         .then(customer => {
             console.info(customer);
             console.info(`${customer.length} customers`);
+            mongoose.connection.close();
         });
 }
 
